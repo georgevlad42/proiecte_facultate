@@ -1,0 +1,203 @@
+﻿<Window x:Name="Calculator" x:Class="CalculatorMVP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculatorMVP"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        Title="Calculator" Height="540" Width="380" Background="White" UseLayoutRounding="False">
+    <Window.Resources>
+        <RoutedUICommand x:Key="Help_Command" Text="Help"/>
+        <RoutedUICommand x:Key="Cut_Command" Text="Cut"/>
+        <RoutedUICommand x:Key="Copy_Command" Text="Copy"/>
+        <RoutedUICommand x:Key="Paste_Command" Text="Paste"/>
+        <RoutedUICommand x:Key="MC_Command" Text="MC"/>
+        <RoutedUICommand x:Key="MR_Command" Text="MR"/>
+        <RoutedUICommand x:Key="M_Plus_Command" Text="M+"/>
+        <RoutedUICommand x:Key="M_Minus_Command" Text="M-"/>
+        <RoutedUICommand x:Key="MS_Command" Text="MS"/>
+        <RoutedUICommand x:Key="Esc_Command" Text="C"/>
+        <RoutedUICommand x:Key="Del_Command" Text="CE"/>
+        <RoutedUICommand x:Key="Backspace_Command" Text="BS"/>
+        <RoutedUICommand x:Key="Percentage_Command" Text="%"/>
+        <RoutedUICommand x:Key="Sqrt_Command" Text="Sqrt"/>
+        <RoutedUICommand x:Key="Squared_Command" Text="Squared"/>
+        <RoutedUICommand x:Key="One_By_X_Command" Text="1/X"/>
+        <RoutedUICommand x:Key="Change_Sign_Command" Text="PlusMinus"/>
+        <RoutedUICommand x:Key="Dot_Command" Text="."/>
+        <RoutedUICommand x:Key="Plus_Command" Text="+"/>
+        <RoutedUICommand x:Key="Minus_Command" Text="-"/>
+        <RoutedUICommand x:Key="Multiply_Command" Text="*"/>
+        <RoutedUICommand x:Key="Divide_Command" Text="/"/>
+        <RoutedUICommand x:Key="Equals_Command" Text="="/>
+        <RoutedUICommand x:Key="Zero_Command" Text="0"/>
+        <RoutedUICommand x:Key="One_Command" Text="1"/>
+        <RoutedUICommand x:Key="Two_Command" Text="2"/>
+        <RoutedUICommand x:Key="Three_Command" Text="3"/>
+        <RoutedUICommand x:Key="Four_Command" Text="4"/>
+        <RoutedUICommand x:Key="Five_Command" Text="5"/>
+        <RoutedUICommand x:Key="Six_Command" Text="6"/>
+        <RoutedUICommand x:Key="Seven_Command" Text="7"/>
+        <RoutedUICommand x:Key="Eight_Command" Text="8"/>
+        <RoutedUICommand x:Key="Nine_Command" Text="9"/>
+    </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource Help_Command}" Executed="About_Click"/>
+        <CommandBinding Command="{StaticResource Cut_Command}" Executed="Cut_Click"/>
+        <CommandBinding Command="{StaticResource Copy_Command}" Executed="Copy_Click"/>
+        <CommandBinding Command="{StaticResource Paste_Command}" Executed="Paste_Click"/>
+        <CommandBinding Command="{StaticResource MC_Command}" Executed="MC_Click"/>
+        <CommandBinding Command="{StaticResource MR_Command}" Executed="MR_Click"/>
+        <CommandBinding Command="{StaticResource M_Plus_Command}" Executed="M_Plus_Click"/>
+        <CommandBinding Command="{StaticResource M_Minus_Command}" Executed="M_Minus_Click"/>
+        <CommandBinding Command="{StaticResource MS_Command}" Executed="MS_Click"/>
+        <CommandBinding Command="{StaticResource Esc_Command}" Executed="C_Click"/>
+        <CommandBinding Command="{StaticResource Del_Command}" Executed="CE_Click"/>
+        <CommandBinding Command="{StaticResource Backspace_Command}" Executed="Backspace_Click"/>
+        <CommandBinding Command="{StaticResource Percentage_Command}" Executed="Percentage_Click"/>
+        <CommandBinding Command="{StaticResource Sqrt_Command}" Executed="Sqrt_Click"/>
+        <CommandBinding Command="{StaticResource Squared_Command}" Executed="Squared_Click"/>
+        <CommandBinding Command="{StaticResource One_By_X_Command}" Executed="One_By_X_Click"/>
+        <CommandBinding Command="{StaticResource Change_Sign_Command}" Executed="Change_Sign_Click"/>
+        <CommandBinding Command="{StaticResource Dot_Command}" Executed="Dot_Click"/>
+        <CommandBinding Command="{StaticResource Plus_Command}" Executed="Plus_Click"/>
+        <CommandBinding Command="{StaticResource Minus_Command}" Executed="Minus_Click"/>
+        <CommandBinding Command="{StaticResource Multiply_Command}" Executed="Multiply_Click"/>
+        <CommandBinding Command="{StaticResource Divide_Command}" Executed="Divide_Click"/>
+        <CommandBinding Command="{StaticResource Equals_Command}" Executed="Equals_Click"/>
+        <CommandBinding Command="{StaticResource Zero_Command}" Executed="Zero_Click"/>
+        <CommandBinding Command="{StaticResource One_Command}" Executed="One_Click"/>
+        <CommandBinding Command="{StaticResource Two_Command}" Executed="Two_Click"/>
+        <CommandBinding Command="{StaticResource Three_Command}" Executed="Three_Click"/>
+        <CommandBinding Command="{StaticResource Four_Command}" Executed="Four_Click"/>
+        <CommandBinding Command="{StaticResource Five_Command}" Executed="Five_Click"/>
+        <CommandBinding Command="{StaticResource Six_Command}" Executed="Six_Click"/>
+        <CommandBinding Command="{StaticResource Seven_Command}" Executed="Seven_Click"/>
+        <CommandBinding Command="{StaticResource Eight_Command}" Executed="Eight_Click"/>
+        <CommandBinding Command="{StaticResource Nine_Command}" Executed="Nine_Click"/>
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Key="F1" Command="{StaticResource Help_Command}"/>
+        <KeyBinding Key="X" Modifiers="Ctrl" Command="{StaticResource Cut_Command}"/>
+        <KeyBinding Key="C" Modifiers="Ctrl" Command="{StaticResource Copy_Command}"/>
+        <KeyBinding Key="V" Modifiers="Ctrl" Command="{StaticResource Paste_Command}"/>
+        <KeyBinding Key="L" Modifiers="Ctrl" Command="{StaticResource MC_Command}"/>
+        <KeyBinding Key="R" Modifiers="Ctrl" Command="{StaticResource MR_Command}"/>
+        <KeyBinding Key="D" Modifiers="Ctrl" Command="{StaticResource M_Plus_Command}"/>
+        <KeyBinding Key="Q" Modifiers="Ctrl" Command="{StaticResource M_Minus_Command}"/>
+        <KeyBinding Key="M" Modifiers="Ctrl" Command="{StaticResource MS_Command}"/>
+        <KeyBinding Key="Esc" Command="{StaticResource Esc_Command}"/>
+        <KeyBinding Key="Delete" Command="{StaticResource Del_Command}"/>
+        <KeyBinding Key="Backspace" Command="{StaticResource Backspace_Command}"/>
+        <KeyBinding Key="D5" Modifiers="Shift" Command="{StaticResource Percentage_Command}"/>
+        <KeyBinding Key="D2" Modifiers="Shift" Command="{StaticResource Sqrt_Command}"/>
+        <KeyBinding Key="Q" Command="{StaticResource Squared_Command}"/>
+        <KeyBinding Key="R" Command="{StaticResource One_By_X_Command}"/>
+        <KeyBinding Key="F9" Command="{StaticResource Change_Sign_Command}"/>
+        <KeyBinding Key="OemPeriod" Command="{StaticResource Dot_Command}"/>
+        <KeyBinding Key="Decimal" Command="{StaticResource Dot_Command}"/>
+        <KeyBinding Key="Add" Command="{StaticResource Plus_Command}"/>
+        <KeyBinding Key="OemPlus" Modifiers="Shift" Command="{StaticResource Plus_Command}"/>
+        <KeyBinding Key="Subtract" Command="{StaticResource Minus_Command}"/>
+        <KeyBinding Key="OemMinus" Command="{StaticResource Minus_Command}"/>
+        <KeyBinding Key="Multiply" Command="{StaticResource Multiply_Command}"/>
+        <KeyBinding Key="D8" Modifiers="Shift" Command="{StaticResource Multiply_Command}"/>
+        <KeyBinding Key="Divide" Command="{StaticResource Divide_Command}"/>
+        <KeyBinding Key="OemQuestion" Command="{StaticResource Divide_Command}"/>
+        <KeyBinding Key="OemPlus" Command="{StaticResource Equals_Command}"/>
+        <KeyBinding Key="Enter" Command="{StaticResource Equals_Command}"/>
+        <KeyBinding Key="D0" Command="{StaticResource Zero_Command}"/>
+        <KeyBinding Key="NumPad0" Command="{StaticResource Zero_Command}"/>
+        <KeyBinding Key="D1" Command="{StaticResource One_Command}"/>
+        <KeyBinding Key="NumPad1" Command="{StaticResource One_Command}"/>
+        <KeyBinding Key="D2" Command="{StaticResource Two_Command}"/>
+        <KeyBinding Key="NumPad2" Command="{StaticResource Two_Command}"/>
+        <KeyBinding Key="D3" Command="{StaticResource Three_Command}"/>
+        <KeyBinding Key="NumPad3" Command="{StaticResource Three_Command}"/>
+        <KeyBinding Key="D4" Command="{StaticResource Four_Command}"/>
+        <KeyBinding Key="NumPad4" Command="{StaticResource Four_Command}"/>
+        <KeyBinding Key="D5" Command="{StaticResource Five_Command}"/>
+        <KeyBinding Key="NumPad5" Command="{StaticResource Five_Command}"/>
+        <KeyBinding Key="D6" Command="{StaticResource Six_Command}"/>
+        <KeyBinding Key="NumPad6" Command="{StaticResource Six_Command}"/>
+        <KeyBinding Key="D7" Command="{StaticResource Seven_Command}"/>
+        <KeyBinding Key="NumPad7" Command="{StaticResource Seven_Command}"/>
+        <KeyBinding Key="D8" Command="{StaticResource Eight_Command}"/>
+        <KeyBinding Key="NumPad8" Command="{StaticResource Eight_Command}"/>
+        <KeyBinding Key="D9" Command="{StaticResource Nine_Command}"/>
+        <KeyBinding Key="NumPad9" Command="{StaticResource Nine_Command}"/>
+    </Window.InputBindings>
+    <Grid x:Name="MainGrid">
+        <Grid Margin="10,154,10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Button x:Name="Percentage_Button" Content="%" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Height="34.167" Margin="10,10,0,0" FontSize="22" Click="Percentage_Click" Focusable="False"/>
+            <Button x:Name="Sqrt_Button" Content="√" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Height="34.167" Grid.Column="1" Margin="10,10,0,0" FontSize="22" Click="Sqrt_Click" Focusable="False"/>
+            <Button x:Name="Squared_Button" Content="x²" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Height="34.167" Grid.Column="2" Margin="10,10,0,0" FontSize="22" FontStyle="Italic" Click="Squared_Click" Focusable="False"/>
+            <Button x:Name="OneByX_Button" Content="¹/x" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Height="34.167" Grid.Column="3" Margin="10,10,0,0" FontSize="22" FontStyle="Italic" Click="One_By_X_Click" Focusable="False"/>
+            <Button x:Name="CE_Button" Content="CE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Height="34.167" Margin="10,10,0,0" Grid.Row="1" FontSize="22" Click="CE_Click" Focusable="False"/>
+            <Button x:Name="C_Button" Content="C" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="70" Height="34.167" Grid.Column="1" Margin="10,10,0,0" FontSize="22" Click="C_Click" Focusable="False"/>
+            <Button x:Name="Backspace_Button" Content="⌫" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="70" Height="34.167" Grid.Column="2" Margin="10,10,0,0" FontSize="22" Click="Backspace_Click" Focusable="False"/>
+            <Button x:Name="Plus_Button" Content="+" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Width="70" Height="34.167" Margin="10,10,0,0" Grid.Column="3" FontSize="22" Click="Plus_Click" Focusable="False"/>
+            <Button x:Name="Minus_Button" Content="-" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Width="70" Height="34.167" Margin="10,10,0,0" Grid.Column="3" FontSize="22" Click="Minus_Click" Focusable="False"/>
+            <Button x:Name="Multiply_Button" Content="*" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="34.167" Margin="10,10,0,0" Grid.Column="3" FontSize="22" Click="Multiply_Click" Focusable="False"/>
+            <Button x:Name="Divide_Button" Content="/" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="70" Height="34.167" Grid.Column="3" Margin="10,10,0,0" FontSize="22" Click="Divide_Click" Focusable="False"/>
+            <Button x:Name="Equals_Button" Content="=" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="70" Height="34.167" Margin="10,10,0,0" Grid.Column="3" FontSize="22" Click="Equals_Click" Focusable="False"/>
+            <Button x:Name="ChangeSign_Button" Content="±" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="70" Height="34.167" Margin="10,10,0,0" FontSize="22" Click="Change_Sign_Click" Focusable="False"/>
+            <Button x:Name="Dot_Button" Content="." HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="70" Height="34.167" Margin="10,10,0,0" Grid.Column="2" FontSize="22" Click="Dot_Click" Focusable="False"/>
+            <Button x:Name="Zero_Button" Content="0" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="70" Height="34.167" Margin="10,10,0,0" Grid.Column="1" FontSize="22" FontWeight="Bold" Click="Zero_Click" Focusable="False"/>
+            <Button x:Name="One_Button" Content="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Width="70" Height="34.167" Margin="10,10,0,0" FontSize="22" FontWeight="Bold" Click="One_Click" Focusable="False"/>
+            <Button x:Name="Two_Button" Content="2" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Width="70" Height="34.167" Margin="10,10,0,0" Grid.Column="1" FontSize="22" FontWeight="Bold" Click="Two_Click" Focusable="False"/>
+            <Button x:Name="Three_Button" Content="3" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Width="70" Height="34.167" Margin="10,10,0,0" Grid.Column="2" FontSize="22" FontWeight="Bold" Click="Three_Click" Focusable="False"/>
+            <Button x:Name="Four_Button" Content="4" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Width="70" Height="34.167" Margin="10,10,0,0" FontSize="22" FontWeight="Bold" Click="Four_Click" Focusable="False"/>
+            <Button x:Name="Five_Button" Content="5" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Width="70" Height="34.167" Margin="10,10,0,0" Grid.Column="1" FontSize="22" FontWeight="Bold" Click="Five_Click" Focusable="False"/>
+            <Button x:Name="Six_Button" Content="6" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Width="70" Height="34.167" Margin="10,10,0,0" Grid.Column="2" FontSize="22" FontWeight="Bold" Click="Six_Click" Focusable="False"/>
+            <Button x:Name="Seven_Button" Content="7" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="34.167" Margin="10,10,0,0" FontSize="22" FontWeight="Bold" Click="Seven_Click" Focusable="False"/>
+            <Button x:Name="Eight_Button" Content="8" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="34.167" Margin="10,10,0,0" Grid.Column="1" FontSize="22" FontWeight="Bold" Click="Eight_Click" Focusable="False"/>
+            <Button x:Name="Nine_Button" Content="9" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="34.167" Margin="10,10,0,0" Grid.Column="2" FontSize="22" FontWeight="Bold" Click="Nine_Click" Focusable="False"/>
+            <Grid x:Name="MemGrid" Grid.ColumnSpan="4" Margin="0,-36,0,36">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="MC_Button" Content="MC" HorizontalAlignment="Left" VerticalAlignment="Top" Width="47" Margin="14,10,0,0" Height="22" FontSize="14" FontWeight="Medium" Click="MC_Click" Focusable="False"/>
+                <Button x:Name="MR_Button" Content="MR" HorizontalAlignment="Left" VerticalAlignment="Top" Width="47" Margin="13,10,0,0" Height="22" Grid.Column="1" FontSize="14" FontWeight="Medium" Click="MR_Click" Focusable="False"/>
+                <Button x:Name="MPlus_Button" Content="M+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="47" Margin="12,10,0,0" Height="22" Grid.Column="2" FontSize="14" FontWeight="Medium" Click="M_Plus_Click" Focusable="False"/>
+                <Button x:Name="MMinus__Button" Content="M-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="47" Margin="11,10,0,0" Height="22" Grid.Column="3" FontSize="14" FontWeight="Medium" Click="M_Minus_Click" Focusable="False"/>
+                <Button x:Name="MS_Button" Content="MS" HorizontalAlignment="Left" VerticalAlignment="Top" Width="47" Margin="10,10,0,0" Height="22" Grid.Column="4" FontSize="14" FontWeight="Medium" Click="MS_Click" Focusable="False"/>
+            </Grid>
+            <TextBlock x:Name="MainCalc" Grid.ColumnSpan="4" Height="34" Margin="0,-81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FrameworkElement.FlowDirection="LeftToRight" Background="#FFF0F0F0" HorizontalAlignment="Right" Width="354" Foreground="Black" TextAlignment="Right"/>
+            <TextBlock x:Name="SubCalc" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,-111,0,0" Width="354" Grid.ColumnSpan="4" FrameworkElement.FlowDirection="LeftToRight" Background="#FFF0F0F0" TextAlignment="Left"/>
+        </Grid>
+        <StackPanel>
+            <Menu>
+                <MenuItem x:Name="File_Button" Header="File" Focusable="False">
+                    <MenuItem x:Name="Cut_Button" Header="Cut" InputGestureText="Ctrl+X" Click="Cut_Click" Focusable="False"/>
+                    <MenuItem x:Name="Copy_Button" Header="Copy" InputGestureText="Ctrl+C" Click="Copy_Click" Focusable="False"/>
+                    <MenuItem x:Name="Paste_Button" Header="Paste" InputGestureText="Ctrl+V" Click="Paste_Click" Focusable="False"/>
+                    <Separator/>
+                    <MenuItem x:Name="DigitGrouping_Button" Header="Digit grouping" IsCheckable="True" Checked="DigitGrouping_Click" Unchecked="DigitGrouping_Click" Focusable="False"/>
+                </MenuItem>
+                <MenuItem x:Name="Help_Button" Header="Help" Focusable="False">
+                    <MenuItem x:Name="About_Button" Header="About" Click="About_Click" Focusable="False"/>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,17 @@
+C:\Users\Vlad\source\repos\CalculatorMVP\CalculatorMVP\bin\Debug\CalculatorMVP.exe.config
+C:\Users\Vlad\source\repos\CalculatorMVP\CalculatorMVP\bin\Debug\CalculatorMVP.exe
+C:\Users\Vlad\source\repos\CalculatorMVP\CalculatorMVP\bin\Debug\CalculatorMVP.pdb
+C:\Users\Vlad\source\repos\CalculatorMVP\CalculatorMVP\obj\Debug\CalculatorMVP.csprojResolveAssemblyReference.cache
+C:\Users\Vlad\source\repos\CalculatorMVP\CalculatorMVP\obj\Debug\MainWindow.g.cs
+C:\Users\Vlad\source\repos\CalculatorMVP\CalculatorMVP\obj\Debug\App.g.cs
+C:\Users\Vlad\source\repos\CalculatorMVP\CalculatorMVP\obj\Debug\CalculatorMVP_MarkupCompile.cache
+C:\Users\Vlad\source\repos\CalculatorMVP\CalculatorMVP\obj\Debug\CalculatorMVP_MarkupCompile.lref
+C:\Users\Vlad\source\repos\CalculatorMVP\CalculatorMVP\obj\Debug\MainWindow.baml
+C:\Users\Vlad\source\repos\CalculatorMVP\CalculatorMVP\obj\Debug\CalculatorMVP.g.resources
+C:\Users\Vlad\source\repos\CalculatorMVP\CalculatorMVP\obj\Debug\CalculatorMVP.Properties.Resources.resources
+C:\Users\Vlad\source\repos\CalculatorMVP\CalculatorMVP\obj\Debug\CalculatorMVP.csproj.GenerateResource.Cache
+C:\Users\Vlad\source\repos\CalculatorMVP\CalculatorMVP\obj\Debug\CalculatorMVP.csproj.CoreCompileInputs.cache
+C:\Users\Vlad\source\repos\CalculatorMVP\CalculatorMVP\obj\Debug\CalculatorMVP.exe
+C:\Users\Vlad\source\repos\CalculatorMVP\CalculatorMVP\obj\Debug\CalculatorMVP.pdb
+C:\Users\Vlad\source\repos\CalculatorMVP\CalculatorMVP\obj\Debug\AboutWindow.g.cs
+C:\Users\Vlad\source\repos\CalculatorMVP\CalculatorMVP\obj\Debug\AboutWindow.baml
