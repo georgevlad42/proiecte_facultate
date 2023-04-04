@@ -1,3 +1,4 @@
 # facultate
 Proiecte/teme facultate
-CalculatorMVP - C#
+Calculator - MVP (Licenta) - C#
+Grafice - TV (Master) - draw.io 
